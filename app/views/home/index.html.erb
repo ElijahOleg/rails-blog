@@ -1,19 +1,7 @@
-<% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>
-  </li>
-<% end %>
-
-<h1>Hello <%= current_user.email%></h1>
-
-<ul>
+<ul id="all-posts">
   <% @posts.each do |post|%>
-  <li>
-    <%= post.title %>: <%= post.body%>(<%= count_words(post )%> words)
+  <li class="blog-post">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </li>
   <% end %>
 </ul>
